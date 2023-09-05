@@ -44,9 +44,11 @@ console.log(triangle);
 const cycle = (str3) => {
   arr1 = []
   for (let i=0; i<str3.length; i++) {
-    str3[i] == "e" ? arr1.push("EELZ") : arr1.push("Swolo");
+    str3[i] == "e" ? arr1.push("EELZ") 
+    : str3[i] == "a" ? arr1.push("Swolo")
+    : arr1.push("Frago");
   }
   return arr1
-}
+};
 
 console.log(cycle("keenan"));
