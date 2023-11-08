@@ -30,5 +30,25 @@ function spellMe(str) {
   }
 }
 
+const singleLine = (str1) => { console.log(str1 + " from singleLine") };
+singleLine(username);
+
 console.log(checkName(username));
 spellMe('Keenan is Ezra and they are a banana');
+
+var sides = 3
+var triangle = sides = 3 ? true : false;
+
+console.log(triangle);
+
+const cycle = (str3) => {
+  arr1 = []
+  for (let i=0; i<str3.length; i++) {
+    str3[i] == "e" ? arr1.push("EELZ") 
+    : str3[i] == "a" ? arr1.push("Swolo")
+    : arr1.push("Frago");
+  }
+  return arr1
+};
+
+console.log(cycle("keenan"));
