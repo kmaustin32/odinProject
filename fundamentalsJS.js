@@ -52,3 +52,5 @@ const cycle = (str3) => {
 };
 
 console.log(cycle("keenan"));
+
+console.log("Hello World! This is my version of doing the O_P git lession, since I already have a repo set up for this course and the associated notes")
