@@ -1,2 +1,4 @@
 Use the following lesson on the Odin Project to set up git in an acceptable way:
 https://www.theodinproject.com/lessons/foundations-setting-up-git
+
+Excellent article on writing git commits: https://cbea.ms/git-commit/
