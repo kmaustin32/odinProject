@@ -1,0 +1,14 @@
+/* Display types:
+  Block: Each box will be on the next available line. 
+  In-line: remains in line of the surrounding elements. No height or width. 
+  In-line Block: Like previous except height and width of the elements are respected. 
+
+Orientation:
+  Margin: This changes the amount of space from the edge of the element to the outside. 
+  Padding: Directs the amount of space between the middle items and the edge of the box. 
+  border: this is the border, between the inside and outside of the box. 
+
+Model:
+  Box: This adds the dimensions of the element to the margin and border, so a 100px element with a 20px border and 80px margin makes the total box 200px
+  Alternative Box: Makes the absolute size the dexlared size, so a 100px element stays 100px.
+    box-sizing: border-box */
