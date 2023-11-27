@@ -30,7 +30,7 @@ Flex: this takes three arguments, and is shorthand for flex-grow, flex-shrink, a
     What is flex: auto?
     If you noticed, we mentioned a new flex shorthand flex: auto in the previous note. However we didn’t fully introduce it. flex: auto is one of the shorthands of flex. When auto is defined as a flex keyword it is equivalent to the values of flex-grow: 1, flex-shrink: 1 and flex-basis: auto or to flex: 1 1 auto using the flex shorthand. Note that flex: auto is not the default value when using the flex shorthand despite the name being “auto” which may be slightly confusing at first. You will encounter and learn more about flex: auto and its potential use-cases when reading through the assignment section. */
 
-/* Flex items have a property called gap that is really useful for creating space between elements in the flex container.
+/* Flex CONTAINER has a property called gap that is really useful for creating space between elements in the flex container.
 Flex-wrap: wrap will wrap the items. The default is nowrap, and it will overflow the container. 
 
 Flexbox starts with ideal size, so columns will not be the same size. 
@@ -48,3 +48,15 @@ justify-content works only when the container has extra space and it moves items
 
 align-items: the default is stretch. flex-start or end will move them up or down if there are smaller items in the container. 
 align-self lets you pick a single item that wants to do it's own thing.  */
+/* 
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+This is an excellent source for envisioning flexbox
+
+putting flex-min on the child item will prevent overflow in a shrinking container. 
+Remember, an item with text can only shrink to the width of the longest word there. 
+
+Use margin and margin: auto to separate elements with extra space as well. 
+
+flex-wrap: wrap; will make it so items will wrap to the next line. 
+align-items works the same, just on each row. 
+We also have align-content, which will align the newly created rows themselves.  */
