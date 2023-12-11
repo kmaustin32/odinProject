@@ -1,0 +1,6 @@
+Variables:
+    let (and var, technically): This is the general way to declare a variable. 
+    const: These are for immutable variables, like the hex of a color or the amount of time to load page. 
+        names for const: Do all CAPS for variables that were known before like color.
+                            Use camelCase for those unknown, like normal var.
+
