@@ -21,3 +21,5 @@ let percentage = actual / MAX;
 
 console.log(percentage);
 
+// Second Assignment for Javascript
+
