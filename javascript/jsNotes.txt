@@ -20,6 +20,9 @@ BigInt:
 Strings:
     Strings are characters between 'quotes', "double quotes", or `backticks`.
     Remember template strings? Use backticks to embed variables in a string. `Hello ${varName}, Welcome back!` is a good example.
+    Template literals respect new lines, all the others require \n.
+    To embed quotes, you can either do another option or escape:
+        'He said, "Hello."' or "He said, \"Hello.\""
 
 Booleans:
     These are basically true or false. 
@@ -32,3 +35,7 @@ undefined:
 
 Objects and Symbols:
     
+Use typeof x to check type.
+    To convert types: String(123) to convert num to string and Number('123') to convert to number. 
+
+For String Methods, See introJs.js Second assignment.
