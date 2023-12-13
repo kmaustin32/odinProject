@@ -1,6 +1,41 @@
+Javascript Primitives
+
 Variables:
     let (and var, technically): This is the general way to declare a variable. 
     const: These are for immutable variables, like the hex of a color or the amount of time to load page. 
         names for const: Do all CAPS for variables that were known before like color.
-                            Use camelCase for those unknown, like normal var.
+            Use camelCase for those unknown, like normal var.
 
+Javascript Primitives:
+Numbers:
+    These are normal numbers that basic operations can be performed on. This includes BOTH INTEGERS AND FLOATS.
+    There are special Numbers that get their own names. 
+        NaN (Not a Number), Infinity, and -Infinity.
+        NaN is basically a failed computation. If NaN is present anywhere in a math formula, the result will also be NaN, with the exception being NaN ** 0 = 1
+
+BigInt:
+    JS doesn't have the space to store integers larger than (2^53-1) (that’s 9007199254740991), or less than -(2^53-1) for negatives.
+    Adding a n to the end of an integer will make it a BigInt. 
+
+Strings:
+    Strings are characters between 'quotes', "double quotes", or `backticks`.
+    Remember template strings? Use backticks to embed variables in a string. `Hello ${varName}, Welcome back!` is a good example.
+    Template literals respect new lines, all the others require \n.
+    To embed quotes, you can either do another option or escape:
+        'He said, "Hello."' or "He said, \"Hello.\""
+
+Booleans:
+    These are basically true or false. 
+
+null:
+    This is just a falsey nothing. Nothing or empty. 
+
+undefined:
+    Basically means that a value is not assigned. For example if I don't say let name = "Ezra" but call name, it will be undefined. 
+
+Objects and Symbols:
+    
+Use typeof x to check type.
+    To convert types: String(123) to convert num to string and Number('123') to convert to number. 
+
+For String Methods, See introJs.js Second assignment.
