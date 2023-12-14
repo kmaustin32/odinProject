@@ -70,3 +70,25 @@ console.log(spacey);
 console.log(spacey.trim());
 
 // https://www.w3schools.com/js/js_string_methods.asp for padding strings. 
+
+//str.padStart(num, "char"); Pads until the given length. You can do the same on end with .padEnd();
+let unpad = '5';
+console.log(unpad.padStart(12, "xo"));
+
+// Extract characters and charcodes with charAt(index) and charCoadeAt(index)
+console.log("The sixth character of text3 is " + text3.charAt(6) + " and the character code of that letter is " + text3.charCodeAt(6)) + ".";
+
+console.log(`The ninth character of text3 is ${text3.charAt(9)} and the character code of that letter is ${text3.charCodeAt(9)}.`);
+
+// You can also use the same syntax for accessing an element in an array, arr[x], but this has some pitfalls. 
+console.log(text1[2]);
+
+//Convert a string to an array with split(char). This will split the string on the selected character. If you do not add char, the return is an array with the full string at position 0. If you split with "", then each character will become an element. 
+
+let sentence = "I am a big fluffy and spiky hedgehog";
+let senArr = sentence.split(" ");
+console.log(`This is a split string: ${senArr}.`)
+console.log(typeof senArr);
+console.log(senArr);
+
+// REMEMBER THAT AN ARRAY WITHIN A STRING LITERAL DOESN'T CONTAIN BRACKETS IN TERMINAL!!!
