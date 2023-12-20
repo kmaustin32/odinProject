@@ -39,3 +39,55 @@ Use typeof x to check type.
     To convert types: String(123) to convert num to string and Number('123') to convert to number. 
 
 For String Methods, See introJs.js Second assignment.
+
+=== COMAPRISONS ===
+
+< <= > >= - These are exactly what they are in math. 
+= - this is how to assign a variable
+== this is how to check if two elements are equal
+!= this is "not equals, without ligatures, ! = 
+
+When doing a string comparison:
+    As long as each letter in the equivalent position is the same, there's no problem and we move to the next letter. When there's a difference:
+        Letters later in the alphabet are "greater".
+            Strings of numbers looks at the first letter and compares, so '2' > '12'
+        Additional letters make a string greater.
+
+Different type comparisons:
+    JS will convert a string of numbers to actual numbers. 
+    true == 1, and false == 0
+
+Strict equality:
+    == can't actually tell the difference between false and 0.
+    === doesn't do a type conversion, it's exact equals.
+    !== is "not exactly equals" and is ! = = 
+
+null and undefined:
+    null == undefined: true
+    null === undefined: false
+    for < and > null becomes 0 and undefined NaN
+
+=== if, else if, else, switch ===
+    These are pretty self explanatory. Remember the order in which they are written matters. 
+
+=== Logical Operators ===
+
+|| OR
+    returns true when any of the given options are true and false when all of the given options are false.
+        This can also be used to find the truthy value. It will evaluate left to right and return the first truthy value. If no values are truthy, it will return the final value.  
+&& AND 
+    basically opposite of OR. returns false unless all given options are true. 
+        Finds first falsey value and returns it. If all values are truthy, it returns the final value. 
+            && HAS HIGHER PRECEDENCE THAN OR
+
+This article says not to use && to replace if statements. 
+Other sources seem to like it. That is, instead of
+
+if (x == 0) alert('number is zero');
+(x == 0) && alert('number is zero');
+
+!  NOT
+    converts to boolean and then flips. 
+!! 
+    This returns the truth value.
+?? NULLISH Coalescing 

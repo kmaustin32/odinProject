@@ -4,12 +4,12 @@ console.log(23 + 97);
 console.log(1 + 2 + 3 + 4 + 5 + 6);
 console.log((4 + 6 + 9) / 77);
 
-let a = 10;
-console.log(a);
-console.log(9 * a);
+let a1 = 10;
+console.log(a1);
+console.log(9 * a1);
 
-let b = 7 * a;
-console.log(b);
+let b1 = 7 * a1;
+console.log(b1);
 
 const MAX = 57;
 let actual = MAX - 13;
@@ -92,3 +92,37 @@ console.log(typeof senArr);
 console.log(senArr);
 
 // REMEMBER THAT AN ARRAY WITHIN A STRING LITERAL DOESN'T CONTAIN BRACKETS IN TERMINAL!!!
+
+// Minor exercises.
+
+function numCheck(num) {
+  if (num < 10) {
+    console.log("The number is small!")
+  } else {
+    console.log("The number is BIG!")
+  }
+}
+numCheck(10);
+
+// const a = "one plus eight"
+// const b = "22 times three"
+// const c = "the *remainder* of 5/4"
+// const d = "the variable 'a' minus 17"
+// const e = "the sum of the previous four variables"
+
+const a = 1 + 8;
+const b = 22 * 3;
+const c = 5 % 4;
+const d = a - 17;
+const e = a + b + c + d;
+
+console.log(`a: ${a}, b: ${b}, c: ${c}, d: ${d}, e: ${e};`);
+
+const birthYear = 1992;
+let thisYear = 2023;
+const firstName = "Ezra";
+const lastName = "Austin";
+
+let greeting = `Hello! My name is ${firstName} ${lastName} and I am ${thisYear - birthYear} years old!`;
+
+console.log(greeting);
