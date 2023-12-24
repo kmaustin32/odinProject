@@ -77,7 +77,7 @@ null and undefined:
         This can also be used to find the truthy value. It will evaluate left to right and return the first truthy value. If no values are truthy, it will return the final value.  
 && AND 
     basically opposite of OR. returns false unless all given options are true. 
-        Finds first falsey value and returns it. If all values are truthy, it returns the final value. 
+        Finds first falsy value and returns it. If all values are truthy, it returns the final value. 
             && HAS HIGHER PRECEDENCE THAN OR
 
 This article says not to use && to replace if statements. 
@@ -91,3 +91,28 @@ if (x == 0) alert('number is zero');
 !! 
     This returns the truth value.
 ?? NULLISH Coalescing 
+
+=== Functions ===
+
+function name (args) {
+    stuff in here
+}
+
+OR ANON
+
+(function () {
+    stuff in here
+})
+
+OR ARROW
+
+(event) => {
+    stuff in here
+}
+
+OR SINGLE LINE return (no parens)
+
+event => event.num * 2
+    See example in JS doc
+
+=== 

@@ -126,3 +126,43 @@ const lastName = "Austin";
 let greeting = `Hello! My name is ${firstName} ${lastName} and I am ${thisYear - birthYear} years old!`;
 
 console.log(greeting);
+
+
+// Third assignment for JavaScript
+
+const times17 = (num) => {
+  console.log(num * 17);
+};
+
+times17 (a);
+
+let splitShopping = shoppingList.split(",");
+console.log(splitShopping);
+
+let mapped = splitShopping.map(item => `${item}!!`);
+console.log(mapped);
+
+function add7 (num) {
+  return num + 7;
+}
+
+function multiply (num1, num2) {
+  return num1 * num2;
+}
+
+function capitalize (str) {
+  let result = str.toLowerCase();
+  let firstLetter = result[0].toUpperCase();
+  result = result.replace(result[0], firstLetter);
+  console.log(result);
+  return;
+}
+
+capitalize('baNaNa');
+
+const lastLetter = (str) => {
+  console.log(str[str.length - 1])
+}
+
+lastLetter("Franz");
+
