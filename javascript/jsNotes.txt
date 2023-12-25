@@ -115,4 +115,14 @@ OR SINGLE LINE return (no parens)
 event => event.num * 2
     See example in JS doc
 
-=== 
+=== ERRORS ===
+
+Most common kind of error seems:
+
+Reference error:
+    This is, for example, what happens when you attempt to access a variable that hasn't been declared yet. 
+Syntax error:
+    When you done goofed on the syntax like leaving out parens. 
+Type error:
+    When you attempt to do something with the wrong type, like trying to push an element to a string rather than an array. (btw, concat will work there).
+
