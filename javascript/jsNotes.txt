@@ -126,3 +126,37 @@ Syntax error:
 Type error:
     When you attempt to do something with the wrong type, like trying to push an element to a string rather than an array. (btw, concat will work there).
 
+
+=== Clean Code ===
+
+Be consistent with names, as in don't just back and forth between calling someone player, player1, and user. 
+
+Variables should be named for nouns, and functions for verbs.
+
+Consider setting some things like constand numbers to variables, and as a bonus show how you got there. instead of 
+
+setTimeout(stopTimer, 3600000)
+
+try
+
+const MILISECONDS_PER_HOUR = 60 * 60 * 1000;
+setTimeout(stopTimer, MILISECONDS_PER_HOUR);
+
+=== Arrays ===
+
+mostly a refresher, but remember, Arrays are actually Objects. 
+
+You can make arrays with let newArr = new Array(1, 2, 3);
+
+Useful methods that I don't use much:
+concat() is for merging arrays. 
+arr1.concat(arr2, arr3, etc);
+
+delete. 
+delete arr[0];
+This will leave a hole. 0 will remain, but with no value. 
+
+flat()
+this will flatten an nested array.
+
+don't forget continue to skip a loop, and break to stop.
