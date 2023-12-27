@@ -166,3 +166,34 @@ const lastLetter = (str) => {
 
 lastLetter("Franz");
 
+// Exercises for looping. 
+// Countdown with do... while
+let countdownNum = 10;
+
+do {
+  if (countdownNum === 10) {
+    console.log("Countdown: 10")
+  } else if (countdownNum === 0) {
+    console.log("Blast off!")
+  } else {
+    console.log(countdownNum.toString());
+  }
+  countdownNum--;
+} while (countdownNum >= 0);
+
+// Party list with for... of syntax
+
+let guestList = new Array("Austin", "Barry", "Charlie", "Donnovan", "Elchanan", "Frieda", "Gimmel");
+let accepted = [],
+  rejected = [];
+
+for (let guest of guestList) {
+  if (guest == "Donnovan" || guest == "Gimmel") {
+    rejected.push(guest);
+  } else {
+    accepted.push(guest);
+  }
+}
+
+console.log(`Guests Accepted: ${accepted}; 
+Guests Rejected: ${rejected};`)
