@@ -160,3 +160,67 @@ flat()
 this will flatten an nested array.
 
 don't forget continue to skip a loop, and break to stop.
+
+=== What is the DOM ===
+
+DOM is the Document Object Model, which is a tree representation of the content of a webpage. 
+
+Selectors are how to target nodes in the DOM.
+
+ In the above example, you could use the following selectors to refer to <div class="display"></div>:
+
+    div.display
+    .display
+    #container > .display
+    div#container > div.display
+
+The most common query selectors are
+    element.querySelector(selector) - returns a reference to the first match of selector.
+    element.querySelectorAll(selectors) - returns a “nodelist” containing references to all of the matches of the selectors.
+
+document.createElement(tagName, [options]) lets you create elements but doesn't insert the new element into the DOM. 
+
+Append elements
+
+    parentNode.appendChild(childNode) - appends childNode as the last child of parentNode.
+    parentNode.insertBefore(newNode, referenceNode) - inserts newNode into parentNode before referenceNode.
+
+Remove elements
+
+    parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
+
+you can add elements and then style them in line as follow. 
+
+let div = document.createElement('div');
+
+div.style.color = 'blue';
+or
+div.style.cssText = 'color: blue; background: white;'
+or
+div.setAttribute('style', 'color: blue');
+
+You may need to edit kebab case items:
+
+div.style.background-color // doesn't work - attempts to subtract color from div.style.background
+div.style.backgroundColor // accesses the div's background-color style
+div.style['background-color'] // also works
+div.style.cssText = "background-color: white;" // sets the div's background-color by assigning a CSS string
+
+You can also edit attributes:
+
+div.setAttribute('id', 'theDive') - updates 'id' to 'theDiv';
+div.getAttribute('id') - returns what the id is, like 'theDiv';
+div.removeAttribute('id') - this will remove the id from the element. 
+
+Classes - pretty straightforward
+
+div.classList.add('class');
+div.classList.remove('class');
+div.classList.toggle('class'); if 'class' removes, if not, adds. 
+
+Add text 
+div.textContent = 'your string here';
+
+Add HTML
+div.innerHTML = '<span>Hello World!</span>'
+
