@@ -224,3 +224,21 @@ div.textContent = 'your string here';
 Add HTML
 div.innerHTML = '<span>Hello World!</span>'
 
+=== EVENT LISTENERS ===
+
+You can add these directly to the button html tag:
+    <button onclick="alert("Hello, World!)";
+
+Otherwise, select the button element in question, and in JS, write:
+    buttonItem.onclick = () => alert("Whatever you want");
+
+For multiple event listeners, try the supreme way:
+    buttonItem.addEventListener("click", () => {
+        alert("This is an event click!");
+    });
+
+e can be passed to event listeners, and it contains a lot of important information. 
+
+e.target will point to the current element that we are working with. 
+
+
