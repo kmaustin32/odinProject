@@ -242,3 +242,58 @@ e can be passed to event listeners, and it contains a lot of important informati
 e.target will point to the current element that we are working with. 
 
 
+=== Other Selectors ===
+
+document.getElementById('element id');
+    note that you don't use a # as you would with querySelector.
+
+document.getElementsByName('name');
+    Returns a list of elements with the specified "name" property.
+    Good for selecting all radio buttons, for example.
+
+document.getElementsByTagName('tag');
+    This is good for getting a list of h2 elements, or the like.
+
+document.getElementsByClassName('class');
+    similar to others.
+
+document.querySelector('css element')
+    This is the most useful in that in can select tags, .class, #id, and '*' to select first element.
+
+document.querySelectorAll('css element');
+    Same as previous, but returns a list of all relevant. You can also select multiple types, in a comma separated way. 
+        document.querySelectorAll('h1, .heading, #title');
+
+node.parentNode
+    Gets the parent element of the selected element. 
+
+node.nextElementSibling
+    Yeah
+
+node.firstChild, node.lastChild, node.childNodes
+node.firstElementChild, node.lastElementChild, node.children
+    Adding the word element will return the entire element. 
+
+document.createElement('element');
+    This is how you create elements, and how we've been doing it. 
+
+parentNode.appendChild('new element');
+    Add the new element to an existing one. 
+
+=== Loading Scripts into JS ===
+
+function loadJSAsync(url) {
+    let script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+loadJS('/lib.js');
+
+element.textContent = 'text'
+element.innerHTML = 'html content'
+
+Creating elements with document.createElement() is way faster and more secure than parent.innerHTML = '<p>Hi</p>'
+
+=== DOCUMENT FRAGMENT ===
