@@ -297,3 +297,29 @@ element.innerHTML = 'html content'
 Creating elements with document.createElement() is way faster and more secure than parent.innerHTML = '<p>Hi</p>'
 
 === DOCUMENT FRAGMENT ===
+
+This is all about composing new DOM elements before adding them to an active DOM tree.
+
+Making changes to the document fragment doesn't render to the DOM and doesn't have a performance hit. 
+
+let fragment = new DocumentFragment();
+or
+let fragment = document.createDocumentFragment();
+
+This is kind of a staging area for creating multiple elements so there's only one new addition to the DOM. 
+
+EXAMPLE
+Maybe you have an unordered list in the DOM tree and you want to add numerous different list items. 
+
+You'd map over each item, creating a list item, and append each of these items to the fragment, and then once finished you'd attach the fragment to the DOM. 
+
+
+element.before('new element') lets you place a new element before a preexisting element on the DOM tree. 
+    You can add an array of element with spread, such as adding list items in this example before the ones already there:
+        list.firstChild.before(...newItems);
+
+element.after('new element') works exactly the same as before, except, you know, after...
+
+=== CURRENT LOCATION ===
+*** Insert Adjacent https://www.javascripttutorial.net/javascript-dom/javascript-insertadjacenthtml/ ***
+    
