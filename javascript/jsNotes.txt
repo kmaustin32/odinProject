@@ -320,6 +320,41 @@ element.before('new element') lets you place a new element before a preexisting 
 
 element.after('new element') works exactly the same as before, except, you know, after...
 
-=== CURRENT LOCATION ===
 *** Insert Adjacent https://www.javascripttutorial.net/javascript-dom/javascript-insertadjacenthtml/ ***
-    
+
+parentElement.insertAdjacentHTML(positionName, element)
+    This is just yet another way of inserting elements. 
+    There are four position names
+        'beforebegin': before the element
+        'afterbegin': before its first child of the element.
+        'beforeend': after the last child of the element
+        'afterend': after the element
+
+    The element is a full element like <p>element</p>
+    like innerHTML, it seems this has security vulnerabilities. 
+
+parentNode.replaceChild(newChild, oldChild);
+example
+menu.replaceChild(li, menu.firstElementChild);
+
+parentNode.removeChild(childNode);
+    this is how we have been removing elements.
+    you can use this in a loop to remove all children. 
+        if you set this to a variable, it will store the removed element so you can use it laster.
+
+element.clone(deep);
+    if you don't set deep, then only the node itself is cloned.
+    if you set deep to true, then it will clone child elements.
+        let clonedNode = original.clone(true);
+
+element.append()
+    What are the differences between append and appendChild
+
+Differences	    append()	            appendChild()
+Return value:	undefined	            The appended Node object
+Input:	        Multiple Node Objects	A single Node object
+Parameters:	    Node and DOMString	    Only Node
+
+parentNode.prepend(...nodes);
+    it's like append but will insert before the first child element rather than after the last child element
+
