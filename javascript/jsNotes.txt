@@ -358,3 +358,15 @@ Parameters:	    Node and DOMString	    Only Node
 parentNode.prepend(...nodes);
     it's like append but will insert before the first child element rather than after the last child element
 
+=== Understanding Relationships Between HTML Attributes & DOM Object’s Properties ===
+
+Normal HTML attributes are converted to properties on the DOM object, like <h1 class="title"></h1> would be accessed in the DOM as h1.class
+
+    element.getAttribute(name) – get the attribute value
+    element.setAttribute(name, value) – set the value for the attribute
+    element.hasAttribute(name) – check for the existence of an attribute
+    element.removeAttribute(name) – remove the attribute
+
+element.attributes will also provide a list of attributes.
+    This is not an array so there are no normal methods.
+
