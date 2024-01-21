@@ -189,6 +189,21 @@ Remove elements
 
     parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
 
+=== Javascript Style ===
+
+We already mentioned before
+    div.style.backgroundColor // accesses the div's background-color style
+    div.style['background-color'] // also works
+    div.style.cssText = "background-color: white;" // sets the div's background-color by assigning a CSS string
+
+There is also a css(element, {css})
+    so i might make a div and select it to a const called test.
+    css(test, {background: 'blue', font-weight: '400'})
+
+We already saw element.classList
+    we can .add, .remove, .replace .toggle
+    we can also .contains('class') to check if a class is applied.
+
 you can add elements and then style them in line as follow. 
 
 let div = document.createElement('div');
@@ -223,23 +238,6 @@ div.textContent = 'your string here';
 
 Add HTML
 div.innerHTML = '<span>Hello World!</span>'
-
-=== EVENT LISTENERS ===
-
-You can add these directly to the button html tag:
-    <button onclick="alert("Hello, World!)";
-
-Otherwise, select the button element in question, and in JS, write:
-    buttonItem.onclick = () => alert("Whatever you want");
-
-For multiple event listeners, try the supreme way:
-    buttonItem.addEventListener("click", () => {
-        alert("This is an event click!");
-    });
-
-e can be passed to event listeners, and it contains a lot of important information. 
-
-e.target will point to the current element that we are working with. 
 
 
 === Other Selectors ===
@@ -374,5 +372,20 @@ adding custom properties should be done with the prefix data-*
 This will add them to the dataset property. 
 element.dataset will return a list of these non-standard attributes.
 
-=== Javascript Style ===
+=== EVENT LISTENERS and JS EVENTS ===
+
+You can add these directly to the button html tag:
+    <button onclick="alert("Hello, World!)";
+
+Otherwise, select the button element in question, and in JS, write:
+    buttonItem.onclick = () => alert("Whatever you want");
+
+For multiple event listeners, try the supreme way:
+    buttonItem.addEventListener("click", () => {
+        alert("This is an event click!");
+    });
+
+e can be passed to event listeners, and it contains a lot of important information. 
+
+e.target will point to the current element that we are working with. 
 
