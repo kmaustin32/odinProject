@@ -370,3 +370,9 @@ Normal HTML attributes are converted to properties on the DOM object, like <h1 c
 element.attributes will also provide a list of attributes.
     This is not an array so there are no normal methods.
 
+adding custom properties should be done with the prefix data-*
+This will add them to the dataset property. 
+element.dataset will return a list of these non-standard attributes.
+
+=== Javascript Style ===
+
