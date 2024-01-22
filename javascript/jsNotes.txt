@@ -389,3 +389,43 @@ e can be passed to event listeners, and it contains a lot of important informati
 
 e.target will point to the current element that we are working with. 
 
+Event Flow:
+
+EVENT BUBBLING MODEL
+The click event for example starts on the node that was clicked, which is the most specific node, and then moves up the tree until it eventually hits the document object, or in modern browsers, it will bubble all the way up the the window object, which is the most broad. 
+
+EVENT CAPTURE MODEL
+This is the exact opposite, where the click is recorded on the document and works its way down the tree to the specific node. 
+
+DOM Level 2:
+    Starts at top level, travels down tree, activates on specific node, travels back up tree to top level. 
+
+An event object is created, and there are various properties. This is usually passed as an argument to your event function. 
+
+There are various properties and methods on the event object, 
+    target: the target element of the event
+    type: the type of event
+    .preventDefault(): this prevents the function from doing its default action, like taking you to a webpage etc. 
+    .stopPropagation(): This prevents the event from traversing the DOM tree.
+
+An event listener is also called an event handler. 
+
+Let's review event handlers. 
+there's HTML level handlers
+<button id='btn' onclick='function()'>Click Me!</button>
+    This is not the ideal for one because it blends HTML and JS which is harder to maintain but even more important is the HTML loads first which will cause problems if the JS is defined elsewhere
+
+DOM LEVEL 0 EVENT HANDLERS
+    This is using the onclick property to add and event handler.
+    const btn = document.getElementById('btn');
+    btn.onclick = function();
+        you can use the 'this' keyword to access information within the element it is defined on. 
+            to remove event handler in this way, set it to null. 
+
+DOM LEVEL 2 EVENT HANDLERS
+element.addEventListener('type', function, boolean);
+    boolean true calls during capture phase, false bubble phase.
+element.removeEventListener();
+    !! This doesn't work with anonymous functions.
+
+https://www.javascripttutorial.net/javascript-dom/javascript-page-load-events/
