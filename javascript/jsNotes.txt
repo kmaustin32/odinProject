@@ -189,6 +189,21 @@ Remove elements
 
     parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
 
+=== Javascript Style ===
+
+We already mentioned before
+    div.style.backgroundColor // accesses the div's background-color style
+    div.style['background-color'] // also works
+    div.style.cssText = "background-color: white;" // sets the div's background-color by assigning a CSS string
+
+There is also a css(element, {css})
+    so i might make a div and select it to a const called test.
+    css(test, {background: 'blue', font-weight: '400'})
+
+We already saw element.classList
+    we can .add, .remove, .replace .toggle
+    we can also .contains('class') to check if a class is applied.
+
 you can add elements and then style them in line as follow. 
 
 let div = document.createElement('div');
@@ -208,7 +223,7 @@ div.style.cssText = "background-color: white;" // sets the div's background-colo
 
 You can also edit attributes:
 
-div.setAttribute('id', 'theDive') - updates 'id' to 'theDiv';
+div.setAttribute('id', 'theDiv') - updates 'id' to 'theDiv';
 div.getAttribute('id') - returns what the id is, like 'theDiv';
 div.removeAttribute('id') - this will remove the id from the element. 
 
@@ -223,23 +238,6 @@ div.textContent = 'your string here';
 
 Add HTML
 div.innerHTML = '<span>Hello World!</span>'
-
-=== EVENT LISTENERS ===
-
-You can add these directly to the button html tag:
-    <button onclick="alert("Hello, World!)";
-
-Otherwise, select the button element in question, and in JS, write:
-    buttonItem.onclick = () => alert("Whatever you want");
-
-For multiple event listeners, try the supreme way:
-    buttonItem.addEventListener("click", () => {
-        alert("This is an event click!");
-    });
-
-e can be passed to event listeners, and it contains a lot of important information. 
-
-e.target will point to the current element that we are working with. 
 
 
 === Other Selectors ===
@@ -370,3 +368,77 @@ Normal HTML attributes are converted to properties on the DOM object, like <h1 c
 element.attributes will also provide a list of attributes.
     This is not an array so there are no normal methods.
 
+adding custom properties should be done with the prefix data-*
+This will add them to the dataset property. 
+element.dataset will return a list of these non-standard attributes.
+
+=== EVENT LISTENERS and JS EVENTS ===
+
+You can add these directly to the button html tag:
+    <button onclick="alert("Hello, World!)";
+
+Otherwise, select the button element in question, and in JS, write:
+    buttonItem.onclick = () => alert("Whatever you want");
+
+For multiple event listeners, try the supreme way:
+    buttonItem.addEventListener("click", () => {
+        alert("This is an event click!");
+    });
+
+e can be passed to event listeners, and it contains a lot of important information. 
+
+e.target will point to the current element that we are working with. 
+
+Event Flow:
+
+EVENT BUBBLING MODEL
+The click event for example starts on the node that was clicked, which is the most specific node, and then moves up the tree until it eventually hits the document object, or in modern browsers, it will bubble all the way up the the window object, which is the most broad. 
+
+EVENT CAPTURE MODEL
+This is the exact opposite, where the click is recorded on the document and works its way down the tree to the specific node. 
+
+DOM Level 2:
+    Starts at top level, travels down tree, activates on specific node, travels back up tree to top level. 
+
+An event object is created, and there are various properties. This is usually passed as an argument to your event function. 
+
+There are various properties and methods on the event object, 
+    target: the target element of the event
+    type: the type of event
+    .preventDefault(): this prevents the function from doing its default action, like taking you to a webpage etc. 
+    .stopPropagation(): This prevents the event from traversing the DOM tree.
+
+An event listener is also called an event handler. 
+
+Let's review event handlers. 
+there's HTML level handlers
+<button id='btn' onclick='function()'>Click Me!</button>
+    This is not the ideal for one because it blends HTML and JS which is harder to maintain but even more important is the HTML loads first which will cause problems if the JS is defined elsewhere
+
+DOM LEVEL 0 EVENT HANDLERS
+    This is using the onclick property to add and event handler.
+    const btn = document.getElementById('btn');
+    btn.onclick = function();
+        you can use the 'this' keyword to access information within the element it is defined on. 
+            to remove event handler in this way, set it to null. 
+
+DOM LEVEL 2 EVENT HANDLERS
+element.addEventListener('type', function, boolean);
+    boolean true calls during capture phase, false bubble phase.
+element.removeEventListener();
+    !! This doesn't work with anonymous functions.
+
+There are different types of event than just on click. There are a number that deal with the process of loading and unloading the page.
+    'DOMContentLoaded' - HTML is loaded, but extras like CSS and JS not.
+    'load' - browser fully loaded with HTML and extras.
+    'beforeunload' - think about "are you sure" before leaving a page. You may want or need to prevent default in the callback. 
+    'unload' - after page completely unloaded. Good time to send analytic data and the like. 
+
+window.addEventListener('load', (event) => { function });
+or 
+window.onload = (event) => { function };
+
+you can add 'load' event listeners also to imgs. 
+    there's also an onload attribute that can be added on img. 
+
+https://www.javascripttutorial.net/javascript-dom/javascript-unload/
