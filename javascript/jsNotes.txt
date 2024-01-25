@@ -223,7 +223,7 @@ div.style.cssText = "background-color: white;" // sets the div's background-colo
 
 You can also edit attributes:
 
-div.setAttribute('id', 'theDive') - updates 'id' to 'theDiv';
+div.setAttribute('id', 'theDiv') - updates 'id' to 'theDiv';
 div.getAttribute('id') - returns what the id is, like 'theDiv';
 div.removeAttribute('id') - this will remove the id from the element. 
 
@@ -428,4 +428,17 @@ element.addEventListener('type', function, boolean);
 element.removeEventListener();
     !! This doesn't work with anonymous functions.
 
-https://www.javascripttutorial.net/javascript-dom/javascript-page-load-events/
+There are different types of event than just on click. There are a number that deal with the process of loading and unloading the page.
+    'DOMContentLoaded' - HTML is loaded, but extras like CSS and JS not.
+    'load' - browser fully loaded with HTML and extras.
+    'beforeunload' - think about "are you sure" before leaving a page. You may want or need to prevent default in the callback. 
+    'unload' - after page completely unloaded. Good time to send analytic data and the like. 
+
+window.addEventListener('load', (event) => { function });
+or 
+window.onload = (event) => { function };
+
+you can add 'load' event listeners also to imgs. 
+    there's also an onload attribute that can be added on img. 
+
+https://www.javascripttutorial.net/javascript-dom/javascript-unload/
