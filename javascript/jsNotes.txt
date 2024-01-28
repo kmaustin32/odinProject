@@ -442,3 +442,7 @@ you can add 'load' event listeners also to imgs.
     there's also an onload attribute that can be added on img. 
 
 https://www.javascripttutorial.net/javascript-dom/javascript-unload/
+
+on unload is also an attrubute that can be added to an element or as a property. Obviously, unload fires before beforeunload
+
+beforeunload is really for doing things like asking if you really want to leave the page, as mentioned before. 
