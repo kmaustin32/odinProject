@@ -492,3 +492,27 @@ screenX and screenY
 clientX and clientY 
     Shows the cursor's position within the client area. 
 
+=== KEYBOARD EVENTS ===
+
+When you press a key, the events happen in the following order:
+'keydown' 'keypress' 'keyup'
+
+keydown when you press a key on the keyboard and fires repeatedly when held.
+keypress does the same, but only for character keys like a b e.
+keyup fires when you stop pressing a key. 
+
+keypress is NOT fired when pressing a non-character key. 
+
+keyboard event properties.
+    !!! THIS IS WHAT I WAS LOOKING FOR THAT REPLACES .keyCode, which is now depreciated for some reason !!!
+
+key   
+    this returns the character pressed.
+    event.key
+code 
+    this returns the physical key code. 
+    event.code
+
+if you press the 'z' key for example:
+    key=z,code=KeyZ
+
