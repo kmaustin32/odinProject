@@ -441,8 +441,54 @@ window.onload = (event) => { function };
 you can add 'load' event listeners also to imgs. 
     there's also an onload attribute that can be added on img. 
 
-https://www.javascripttutorial.net/javascript-dom/javascript-unload/
-
 on unload is also an attrubute that can be added to an element or as a property. Obviously, unload fires before beforeunload
 
 beforeunload is really for doing things like asking if you really want to leave the page, as mentioned before. 
+
+https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/
+
+=== MOUSE EVENTS IN JS ===
+
+DOM Level 3 Events defines 9 mouse events. 
+
+When you click a mouse on an element, there events fire in this order:
+'mousedown' 'mouseup' 'click'
+
+'click' will not fire if you trigger 'mousedown' on one element, move the mouse, and then trigger 'mouseup' on another element. 
+
+'dblclick'
+    You'll basically never use this event but it's basically the 7th event when you double click an element:
+        'mousedown''mouseup''click''mousedown''mouseup''click''dblclick'
+
+'mousemove' 
+    This will fire every time the mouse moves on an element, even for a single pixel. It's important to remove this handler when finished or it's going to really bog down the browser. 
+        element.onmousemove = null;
+
+'mouseover' and 'mouseout'
+    These are essentially events when you hover over an element and then stop hovering over an element. 
+
+'mouseenter' and 'mouseleave' 
+    basically the same as the previous, except event doesn't bubble. 
+
+it is best practive to always use .addEventListener() for clicks. 
+
+btn.addEventListener('click', (event) => thatThingYouWant);
+
+or you can do the property way
+
+btn.onclick = (event) => thatThingYouWant;
+
+The event object has a button property that returns a number that corresponds with a mouse button:
+    0: the main mouse button is pressed, usually the left button.
+    1: the auxiliary button is pressed, usually the middle button or the wheel button.
+    2: the secondary button is pressed, usually the right button.
+    3: the fourth button is pressed, usually the Browser Back button.
+    4: the fifth button is pressed, usually the Browser Forward button.
+
+The event object also has properties for shiftKey ctrlKey altKey and metaKey that return true when pressed and otherwise return false. 
+
+screenX and screenY
+    These show the mouse cursor's position relative to the whole screen.
+clientX and clientY 
+    Shows the cursor's position within the client area. 
+
