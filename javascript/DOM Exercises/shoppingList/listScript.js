@@ -7,7 +7,7 @@ addButton.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', (event) => {
-  if (event.keyCode == '13') {
+  if (event.key == 'Enter') {
     addItemToList();
   };
   return;

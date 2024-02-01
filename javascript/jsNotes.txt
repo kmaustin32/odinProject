@@ -441,4 +441,140 @@ window.onload = (event) => { function };
 you can add 'load' event listeners also to imgs. 
     there's also an onload attribute that can be added on img. 
 
-https://www.javascripttutorial.net/javascript-dom/javascript-unload/
+on unload is also an attrubute that can be added to an element or as a property. Obviously, unload fires before beforeunload
+
+beforeunload is really for doing things like asking if you really want to leave the page, as mentioned before. 
+
+https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/
+
+=== MOUSE EVENTS IN JS ===
+
+DOM Level 3 Events defines 9 mouse events. 
+
+When you click a mouse on an element, there events fire in this order:
+'mousedown' 'mouseup' 'click'
+
+'click' will not fire if you trigger 'mousedown' on one element, move the mouse, and then trigger 'mouseup' on another element. 
+
+'dblclick'
+    You'll basically never use this event but it's basically the 7th event when you double click an element:
+        'mousedown''mouseup''click''mousedown''mouseup''click''dblclick'
+
+'mousemove' 
+    This will fire every time the mouse moves on an element, even for a single pixel. It's important to remove this handler when finished or it's going to really bog down the browser. 
+        element.onmousemove = null;
+
+'mouseover' and 'mouseout'
+    These are essentially events when you hover over an element and then stop hovering over an element. 
+
+'mouseenter' and 'mouseleave' 
+    basically the same as the previous, except event doesn't bubble. 
+
+it is best practive to always use .addEventListener() for clicks. 
+
+btn.addEventListener('click', (event) => thatThingYouWant);
+
+or you can do the property way
+
+btn.onclick = (event) => thatThingYouWant;
+
+The event object has a button property that returns a number that corresponds with a mouse button:
+    0: the main mouse button is pressed, usually the left button.
+    1: the auxiliary button is pressed, usually the middle button or the wheel button.
+    2: the secondary button is pressed, usually the right button.
+    3: the fourth button is pressed, usually the Browser Back button.
+    4: the fifth button is pressed, usually the Browser Forward button.
+
+The event object also has properties for shiftKey ctrlKey altKey and metaKey that return true when pressed and otherwise return false. 
+
+screenX and screenY
+    These show the mouse cursor's position relative to the whole screen.
+clientX and clientY 
+    Shows the cursor's position within the client area. 
+
+=== KEYBOARD EVENTS ===
+
+When you press a key, the events happen in the following order:
+'keydown' 'keypress' 'keyup'
+
+keydown when you press a key on the keyboard and fires repeatedly when held.
+keypress does the same, but only for character keys like a b e.
+keyup fires when you stop pressing a key. 
+
+keypress is NOT fired when pressing a non-character key. 
+
+keyboard event properties.
+    !!! THIS IS WHAT I WAS LOOKING FOR THAT REPLACES .keyCode, which is now depreciated for some reason !!!
+
+key   
+    this returns the character pressed.
+    event.key
+code 
+    this returns the physical key code. 
+    event.code
+
+if you press the 'z' key for example:
+    key=z,code=KeyZ
+
+=== Scroll Events ===
+
+https://www.javascripttutorial.net/javascript-dom/javascript-scroll-events/
+
+The scroll event can fire in various ways, such as the mouse wheel, using the scroll bar, using keys, clicking an element linked with an id, etc.
+
+element.addEventListener('scroll', (event) => { return });
+
+Typically, this is placed on window. 
+document.body.onscroll is the same as window.onscroll.
+
+There are two associated properties, scrollX and scrollY that tell you how much as been scrolled. It's a float, so Math.round() if need be. 
+
+The pageXOffset and pageYOffset are aliases of the scrollX and scrollY properties.
+
+!!!What about scrolling on specific elements rather than window?
+
+We will use scrollTop and scrollLeft rather than x and y
+
+!!! Adding to scrollTop moves down page, and same for scroll Left.
+
+It's important to understand that using the scroll wheel will change the value, but also changing the value will scroll the page!!!
+
+Scroll will file so much it will bog down the webpage. 
+
+EVENT THROTTLING
+Try the following:
+
+let scrolling = false;
+
+window.scroll = () => {
+    scrolling = true;
+};
+
+setInterval(() => {
+    if (scrolling) {
+        scrolling = false;
+        // place the scroll handling logic here
+    }
+},300);
+Code language: JavaScript (javascript)
+How it works:
+
+First, set the scrolling flag to false. If the scroll event fires set the scrolling flag to true inside the scroll event handler.
+Then, execute the scroll event handler using the setInterval() every 300 milliseconds if the scroll events have been fired.
+This way of handling the scroll event is called the event throttling that throttles an onscroll‘s underlying operation every 300 milliseconds. The throttling slows down the rate of execution of the scroll event handler.
+
+Passive events.
+You can pass passive: true to events not calling preventDefault(); This is passes as a third argument in curly braces. 
+
+element.addEventListener('scroll', (event) => { return }, { passive: true });
+
+=== SCROLL INTO VIEW ===
+https://www.javascripttutorial.net/javascript-dom/javascript-scrollintoview/
+
+This is to be used when you want a specific element to scroll into view. 
+This method take a boolean or an object.
+
+element.scrollIntoView(alignToTop);
+or 
+element.scrollIntoView(options);
+
