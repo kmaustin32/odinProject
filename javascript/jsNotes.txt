@@ -516,3 +516,65 @@ code
 if you press the 'z' key for example:
     key=z,code=KeyZ
 
+=== Scroll Events ===
+
+https://www.javascripttutorial.net/javascript-dom/javascript-scroll-events/
+
+The scroll event can fire in various ways, such as the mouse wheel, using the scroll bar, using keys, clicking an element linked with an id, etc.
+
+element.addEventListener('scroll', (event) => { return });
+
+Typically, this is placed on window. 
+document.body.onscroll is the same as window.onscroll.
+
+There are two associated properties, scrollX and scrollY that tell you how much as been scrolled. It's a float, so Math.round() if need be. 
+
+The pageXOffset and pageYOffset are aliases of the scrollX and scrollY properties.
+
+!!!What about scrolling on specific elements rather than window?
+
+We will use scrollTop and scrollLeft rather than x and y
+
+!!! Adding to scrollTop moves down page, and same for scroll Left.
+
+It's important to understand that using the scroll wheel will change the value, but also changing the value will scroll the page!!!
+
+Scroll will file so much it will bog down the webpage. 
+
+EVENT THROTTLING
+Try the following:
+
+let scrolling = false;
+
+window.scroll = () => {
+    scrolling = true;
+};
+
+setInterval(() => {
+    if (scrolling) {
+        scrolling = false;
+        // place the scroll handling logic here
+    }
+},300);
+Code language: JavaScript (javascript)
+How it works:
+
+First, set the scrolling flag to false. If the scroll event fires set the scrolling flag to true inside the scroll event handler.
+Then, execute the scroll event handler using the setInterval() every 300 milliseconds if the scroll events have been fired.
+This way of handling the scroll event is called the event throttling that throttles an onscroll‘s underlying operation every 300 milliseconds. The throttling slows down the rate of execution of the scroll event handler.
+
+Passive events.
+You can pass passive: true to events not calling preventDefault(); This is passes as a third argument in curly braces. 
+
+element.addEventListener('scroll', (event) => { return }, { passive: true });
+
+=== SCROLL INTO VIEW ===
+https://www.javascripttutorial.net/javascript-dom/javascript-scrollintoview/
+
+This is to be used when you want a specific element to scroll into view. 
+This method take a boolean or an object.
+
+element.scrollIntoView(alignToTop);
+or 
+element.scrollIntoView(options);
+
