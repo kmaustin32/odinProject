@@ -4,14 +4,14 @@ const addButton = document.querySelector('#addButton');
 
 addButton.addEventListener('click', () => {
   addItemToList();
-})
+});
 
 document.addEventListener('keydown', (event) => {
   if (event.key == 'Enter') {
     addItemToList();
   };
   return;
-})
+});
 
 function addItemToList() {
   let itemName = input.value;
