@@ -578,3 +578,58 @@ element.scrollIntoView(alignToTop);
 or 
 element.scrollIntoView(options);
 
+=== OBJECT BASICS ===
+
+Key - value pairs within curly braces.
+
+Two ways to make an object:
+Object literal:
+let obj1 = {};
+
+Object constructor:
+let obj2 = new Object();
+
+Here's a sample object: 
+let user = {
+  name: "John",
+  age: 30,
+  "likes birds": true
+};
+
+multiword property name must be quoted
+
+these properties can be accessed either by dot or bracket notation
+user.name or user[name] both work.
+
+you can use computed properties to use variables within an object
+
+let fruit = 'apple';
+let bag = {
+  [fruit + 'Computers']: 5 // bag.appleComputers = 5
+};
+
+you can also use shorthand if a key and variable share a name:
+
+function makeUser(name, age) {
+  return {
+    name, // same as name: name
+    age,  // same as age: age
+    // ...
+  };
+};
+
+Property names are ultimately converted to stirngs even if you don't use that type when originally declaring them. 
+
+you can use "in" to see if a property exists in an object:
+
+let inObj = { isIn: 'yes' };
+// isIn in inObj will return true.
+
+Then we can cycle through keys with for...in
+for (let key in user) {
+    key // returns the key
+    user[key] // returns the value
+}
+
+properties that can be converted to numbers are sorted, but those that cannot are returned in the order they are listed. 
+
