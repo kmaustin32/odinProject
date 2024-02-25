@@ -633,3 +633,49 @@ for (let key in user) {
 
 properties that can be converted to numbers are sorted, but those that cannot are returned in the order they are listed. 
 
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+
+Here are some addition bits to know about objects. 
+
+You can go deep into objects with bracket notations too. 
+person.name.first or person[name][first].
+
+But let's be honest here, dot notation is way nicer for this. 
+
+you can also define functions on an object (method);
+
+const person = {
+    name: {
+        first: 'Ezra',
+        last: 'Austin'
+    },
+    getFirstName: function {
+        return this.name.first
+    }
+}
+
+this way, you can get a first name with person.getFirstName();
+
+=== Constructors ===
+
+You can create constructors:
+
+function makePerson(name) {
+    let obj = {};
+    obj.name = name;
+
+    obj.introduceSelf = function() {
+        console.log(`Hi, I am ${this.name}!`);
+    };
+    
+    return obj;
+};
+
+Constructors should start with a capital. See a batter verison below:
+
+function Person(name) {
+    this.name = name;
+    this.introduceSelf = function() {
+        console.log(`hi, i am ${this.nam}`)
+    };
+};
