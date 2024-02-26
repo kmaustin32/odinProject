@@ -679,3 +679,16 @@ function Person(name) {
         console.log(`hi, i am ${this.nam}`)
     };
 };
+
+=== Very Important Array Methods ===
+Map, Filter, and Reduce
+
+Map takes callback function as an argument (you can also put the function as the argument itself).
+
+array.map(item => item ** 2);
+    This should return a new array with each new element squared
+
+Filter filters an array, as you may expect. 
+array.filter(trueCondition => arrOfTrueCondition);
+
+Reduce. This one has given me trouble for a really long time. 
