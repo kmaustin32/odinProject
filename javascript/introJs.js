@@ -197,3 +197,17 @@ for (let guest of guestList) {
 
 console.log(`Guests Accepted: ${accepted}; 
 Guests Rejected: ${rejected};`)
+
+// Let's try to do sum of tripled evens. 
+const tripEvenArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function tripledEvens(arr) {
+  let result = arr
+  .filter(item => item % 2 == 0)
+  .map(item => item * 3)
+  .reduce((total, currentItem) => total += currentItem);
+  
+  return result;
+};
+
+console.log(tripledEvens(tripEvenArr));
