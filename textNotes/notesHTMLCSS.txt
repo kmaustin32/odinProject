@@ -44,13 +44,13 @@ The following is a nice way to flip a flex for a smaller screen.
   flex-direction: row;
 }
 
-justify-content works only when the container has extra space and it moves items in the container. Center, start, and end all kind of work, and put them where you would expect. There's is also space-between and space-around and more importatnly, there is space-evenly.
+justify-content works only when the container has extra space and it moves items in the container. Center, start, and end all kind of work, and put them where you would expect. There's is also space-between and space-around and more importantly, there is space-evenly.
 
 align-items: the default is stretch. flex-start or end will move them up or down if there are smaller items in the container. 
 align-self lets you pick a single item that wants to do it's own thing.  */
 /* 
 https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
-This is an excellent source for envisioning flexbox
+This is an excellent source for envisioning flexbox.
 
 putting flex-min on the child item will prevent overflow in a shrinking container. 
 Remember, an item with text can only shrink to the width of the longest word there. 
@@ -60,3 +60,47 @@ Use margin and margin: auto to separate elements with extra space as well.
 flex-wrap: wrap; will make it so items will wrap to the next line. 
 align-items works the same, just on each row. 
 We also have align-content, which will align the newly created rows themselves.  */
+
+
+=== INTERMEDIATE HTML AND CSS ===
+
+HTML
+
+<html></html> This is the root element. It's at the top of the document. 
+
+Then there's the metadata
+<base>
+
+<head></head></head>
+  This is basically what stores the basic metadata
+<link>
+  For gathering content from other files. Use for CSS and Favicons
+<script></script>
+  This is obviously for JavaScript
+<style></style>
+  This is where you might want to but some doc specific HTML
+<title></title>
+  This is what will show up in the browser tab
+<meta> 
+
+<body></body>
+  Basically everything that's going to be rendered goes in here
+
+There are various specifically named tags like header footer article and more. This also includes hgroup like h1 and h5 etc. 
+
+There are also various text tags that we have seen before. The most important is obviously div, but we have also seen ol, ul, li and others like menu which is basically a ul with a better name and blockquote. 
+
+=== Emmet ===
+
+We've made a shortcut for wrapping code in a tags, alt + a and a shortcut for removing said tags, alt + s.
+
+Here are some important things about emmet. 
+  - if you don't specify the tag and only provide and id or classs, it wall automatically assume you want a div. 
+  - you can chain by using greater than like in css. div>nav>ul>li*3 for example.
+  - putting text in [] will let you add attributes. div[data-selected].
+  - putting {} will let you add text. li*3{I'm a list item}.
+  - you can count with $. header>nav>ul>li*3{I am list item $} will count. Also, $$ will zero pad your number. 
+  - you can create siblings with +. header+main+footer.
+  - you can escape out of children with ^. header>nav^main+footer alternatively, you can use (). (header>nav)main+footer is the same as above.
+
+
