@@ -133,7 +133,7 @@ Be consistent with names, as in don't just back and forth between calling someon
 
 Variables should be named for nouns, and functions for verbs.
 
-Consider setting some things like constand numbers to variables, and as a bonus show how you got there. instead of 
+Consider setting some things like constant numbers to variables, and as a bonus show how you got there. instead of 
 
 setTimeout(stopTimer, 3600000)
 

@@ -10,7 +10,7 @@ Orientation:
 
 Model:
   Box: This adds the dimensions of the element to the margin and border, so a 100px element with a 20px border and 80px margin makes the total box 200px
-  Alternative Box: Makes the absolute size the dexlared size, so a 100px element stays 100px.
+  Alternative Box: Makes the absolute size the declared size, so a 100px element stays 100px.
     box-sizing: border-box */
 
 /* Display: Flex 
