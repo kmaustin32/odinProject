@@ -104,3 +104,47 @@ Here are some important things about emmet.
   - you can escape out of children with ^. header>nav^main+footer alternatively, you can use (). (header>nav)main+footer is the same as above.
 
 
+=== SVG ===
+
+SVGs are Scalable Vector Graphics. They can be resized without losing quality, which makes them ideal for web usage. You can also change their qualities through CSS and JS, which is another major positive. 
+
+Icons, backgrounds, layers are all good use cases for SVGs.
+
+What's the difference between SVG and a normal image? Well an SVG uses math to determine its shape while a normal "raster" image uses a pixel grid to determine how the image looks. This is why is can scale so well. 
+
+SVGs are actually comprised of XML, which is a bit similar to HTML which means their source can be editied. 
+
+xmlns - This is saying what kind of xml we are working with. Some browsers need this to function
+
+viewBox - This is essentially the size of the SVG canvas, and will determind where the inner pieces fall. 
+
+<circle>, <rect>, <path>, and <text> - These are the core building blocks of SVG. You can tell what they are based on the names for the most part. 
+
+fill and stroke are attributes that can be changed via CSS. 
+
+There are two methods of implementing SVGs. Link and inline. The advantage to linking is the code is much more readable and will not slow the page on load. As a drawback, its properties can not be accessed for use with JS. In line looks messy and is slow, but you can edit the attributes. 
+
+=== TABLES ===
+
+these are created with <table></table>
+tr are rows, th are the headings, and td are the data
+
+<table>
+  <tr>
+    <th>Heading One</th>
+    <th>Hading Two</th>
+  </tr>
+  <tr>
+    <td>Data one</td>
+    <td>Date two</td>
+  </tr>
+</table>
+
+you can also add colors
+<colgroup>
+  <col />
+  <col style="background-color: yellow />
+</colgroup>
+
+Pick up here next time: 
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced
