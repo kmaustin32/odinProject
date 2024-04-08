@@ -37,7 +37,7 @@ console.log(checkName(username));
 spellMe('Keenan is Ezra and they are a banana');
 
 var sides = 3
-var triangle = sides = 3 ? true : false;
+var triangle = sides == 3 ? true : false;
 
 console.log(triangle);
 
