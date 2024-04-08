@@ -116,7 +116,7 @@ SVGs are actually comprised of XML, which is a bit similar to HTML which means t
 
 xmlns - This is saying what kind of xml we are working with. Some browsers need this to function
 
-viewBox - This is essentially the size of the SVG canvas, and will determind where the inner pieces fall. 
+viewBox - This is essentially the size of the SVG canvas, and will determined where the inner pieces fall. 
 
 <circle>, <rect>, <path>, and <text> - These are the core building blocks of SVG. You can tell what they are based on the names for the most part. 
 
