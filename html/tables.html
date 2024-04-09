@@ -3,28 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border: 4px solid black;
+      border-collapse: collapse;
+    }
+    thead {
+      font-weight: bold;
+      text-decoration: underline black;
+    }
+    th, td {
+      border: 2px solid black;
+      padding: 4px;
+    }
+    tbody {
+      font-style: italic;
+    }
+    tfoot {
+      font-weight: bold;
+    }
+  </style>
   <title>Document</title>
 </head>
 <body>
+  <h2>My Sample Expenses Table</h2>
   <table>
+    <caption>Expenses Summary</caption>
     <colgroup>
       <col />
       <col style="background-color: aqua;">
       <col style="background-color: aqua;">
       <col />
     </colgroup>
-    <tr>
-      <th>Heading One</th>
-      <th>Heading Two</th>
-      <th>Heading Three</th>
-      <th>Heading Four</th>
-    </tr>
-    <tr>
-      <td>Data Item 01</td>
-      <td>Data Item 02</td>
-      <td>Data Item 03</td>
-      <td>Data Item 04</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Headings</th>
+        <th>Item</th>
+        <th>Category</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Computer</td>
+        <td>Electronics</td>
+        <td>$2,200.00</td>
+      </tr>
+      <tr>
+        <td>Data 2</td>
+        <td>Groceries</td>
+        <td>Living Expenses</td>
+        <td>$249.50</td>
+      </tr>
+      <tr>
+        <td>Data 3</td>
+        <td>Sandals</td>
+        <td>Footwear</td>
+        <td>$100.00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total</td>
+        <td>$2,549.50</td>
+      </tr>
+    </tfoot>
   </table>
 </body>
 </html>
+
+<!-- There are attributes colspan and rowspan that allow th and td to take up additional space -->
