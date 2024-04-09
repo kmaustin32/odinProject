@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
     table, thead, tbody, tr, th, td {
-      border: 1px solid black;
+      border: 1px solid gray;
       border-collapse: collapse;
-      padding: 4px;
+      padding: 10px;
       text-align: center;
     }
     tr:nth-child(odd) {
-      background-color: rgb(230, 230, 230);
+      background-color: rgb(240, 240, 240);
+    }
+    td {
+      font-size: 90%;
+      font-weight: lighter;
     }
     caption {
       padding-bottom: 8px;
@@ -32,12 +39,12 @@
       <tr>
         <th colspan="2"> </th>
         <th scope="col">Name</th>
-        <th>Mass (10^24kg)</th>
+        <th>Mass (10<sup>24</sup>kg)</th>
         <th>Diameter (km)</th>
-        <th>Density (kg/m3)</th>
-        <th>Gravity (m/s2)</th>
+        <th>Density (kg/m<sup>3</sup>)</th>
+        <th>Gravity (m/s<sup>2</sup>)</th>
         <th>Length of day (hours)</th>
-        <th>Distance from Sun (10^6km)</th>
+        <th>Distance from Sun (10<sup>6</sup>km)</th>
         <th>Mean temperature (°C)</th>
         <th>Number of moons</th>
         <th>Notes</th>
