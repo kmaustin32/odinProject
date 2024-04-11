@@ -45,15 +45,15 @@ console.log("substr: " + shortSub);
 // replace method is replace(old, new). It does not alter original string. Rather, it returns a new string.  
 
 let testStr = "Tomatoes grow in the ground and are good for french fries.";
-let replStr = testStr.replace("Tomatoes", "Potatoes")
-console.log(`old string: ${testStr}
+let replStr = testStr.replace("Tomatoes", "Potatoes");
+console.log(`old string: ${testStr};
 new string: ${replStr}`);
 
 // To match all, use / /g. str.replace(/Tomatoes/g, "Potatoes");
 // Also, str.replaceAll("str1", "str2") is a thing. 
 
 // Change case of whole string:
-let hello = "Hello, World!"
+let hello = "Hello, World!";
 console.log(hello.toUpperCase());
 console.log(hello.toLocaleLowerCase());
 
@@ -87,7 +87,7 @@ console.log(text1[2]);
 
 let sentence = "I am a big fluffy and spiky hedgehog";
 let senArr = sentence.split(" ");
-console.log(`This is a split string: ${senArr}.`)
+console.log(`This is a split string: ${senArr}.`);
 console.log(typeof senArr);
 console.log(senArr);
 
@@ -97,11 +97,11 @@ console.log(senArr);
 
 function numCheck(num) {
   if (num < 10) {
-    console.log("The number is small!")
+    console.log("The number is small!");
   } else {
-    console.log("The number is BIG!")
-  }
-}
+    console.log("The number is BIG!");
+  };
+};
 numCheck(10);
 
 // const a = "one plus eight"
@@ -144,11 +144,11 @@ console.log(mapped);
 
 function add7 (num) {
   return num + 7;
-}
+};
 
 function multiply (num1, num2) {
   return num1 * num2;
-}
+};
 
 function capitalize (str) {
   let result = str.toLowerCase();
@@ -156,13 +156,13 @@ function capitalize (str) {
   result = result.replace(result[0], firstLetter);
   console.log(result);
   return;
-}
+};
 
 capitalize('baNaNa');
 
 const lastLetter = (str) => {
   console.log(str[str.length - 1])
-}
+};
 
 lastLetter("Franz");
 
@@ -177,7 +177,7 @@ do {
     console.log("Blast off!")
   } else {
     console.log(countdownNum.toString());
-  }
+  };
   countdownNum--;
 } while (countdownNum >= 0);
 
@@ -192,11 +192,11 @@ for (let guest of guestList) {
     rejected.push(guest);
   } else {
     accepted.push(guest);
-  }
-}
+  };
+};
 
 console.log(`Guests Accepted: ${accepted}; 
-Guests Rejected: ${rejected};`)
+Guests Rejected: ${rejected};`);
 
 // Let's try to do sum of tripled evens. 
 const tripEvenArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
