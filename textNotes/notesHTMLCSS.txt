@@ -146,5 +146,28 @@ you can also add colors
   <col style="background-color: yellow />
 </colgroup>
 
-Pick up here next time: 
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced
+See the attributes like colspan and rowspan to change amount of space used on th and td elements.
+
+=== DEFAULT STYLES ===
+
+Reset browser default styles with the following options
+
+Meyer reset is a very common one.
+https://meyerweb.com/eric/tools/css/reset/
+
+Normalize.css is another popular option. This one works a bit differently, as it normalizes the defaults amount popular browsers.
+https://necolas.github.io/normalize.css/
+
+sanitize.css is also another modern option that's extememly opinionated. 
+
+in previous projects, I've just done:
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+Which is also fine, and it clears everything away. 
+
+=== COMMON CSS UNITS ===
+
