@@ -171,3 +171,22 @@ Which is also fine, and it clears everything away.
 
 === COMMON CSS UNITS ===
 
+Absolute Units: The only one you should use in webDev is px, for pixels.
+Obviously, cm and in don't really make sense on digital formats.
+
+Relative Units: These are obviously not fixed. They are technically used for font size, but can be applied to various other elements as well. The two to look out for are em and rem. In general, we will prefer to use rem. 
+
+em: 1em is the font size of the element, or the parent element. For example, if the text size of something 16px, then 4em will be 64px (16*4).
+
+rem: this takes the font size of ROOT element, either :root or html. This makes more sense to use because context will not change the size. 
+
+Viewport Units: vh is viewport height and vw is viewport width. 20vh will take up 20% of the viewport, and similar. 
+
+Line Height: Like lh and rlh, much like em and rem. You can use this with a repeating linear gradient in order to make notepad lines. 
+
+Percentages work as you expect. They take the parent element and use a percent of that. This is not based on font-size, though it can be. It's based on the same attribute of the parent element. If you have nested similar elements, then you'll get progressively smaller content. 
+
+Numbers: These shouldn't be in quotes, but they are there. 
+
+*** Start on color next time ***
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
