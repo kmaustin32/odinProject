@@ -195,14 +195,14 @@ First on the list are the color keywords, which I use refrequently. It seems one
 
 Hex can come with three or six digits and are comprised of digits 0-9 and a-f. When doing the six character layout, there's two digits for each of the rgb channels.
 
-Obviously you can use rgb() or rgba() in ordger to adjust the opacity. Color sections take numbers 0-255, and opacity is 0-1, with zero transparent and one opaque. 
+Obviously you can use rgb() or rgba() in order to adjust the opacity. Color sections take numbers 0-255, and opacity is 0-1, with zero transparent and one opaque. 
 
 of course there is srgb()
 
 There are various ways to use hue to specify color. 
 
 HWB or hwb()
-  This uses hue, white and black. Hue uses the color wheel and thus takes a number 0-360. The other two are 0-100%. 
+  This uses Hue, White and Black. Hue uses the color wheel and thus takes a number 0-360. The other two are 0-100%. 
 HSL or hsl()
   This is Hue, Saturation, Brightness.
   same as above for inputs.
@@ -212,3 +212,42 @@ If you want to use an image as a background, you'd use url().
 There is also a property for background-position, which lets you move the image in the background of the parent container.
 
 There are functions to use as well, like translate() rotate() scale() and calc()
+
+=== FONTS ===
+
+We already went over font family in earlier lessons. 
+
+There are fallback fonts after the desired font. One common list for matching system is:
+font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+Often you can link to online font libraries, but it's better to post your own. 
+
+see the following:
+@font-face {
+  font-family: my-cool-font;
+  src: url(../fonts/the-font-file.woff);
+}
+
+h1 {
+  font-family: my-cool-font, sans-serif;
+}
+
+Various font styles
+font-style: italic; will make things italic for example. Use this instead of em in HTML if you don't actually want to emphasize.
+
+letter-spacing lets you add space between characters
+line-height does just about what you'd expect in Word or the like
+text-transform can do things like change the case of a string of text
+text-shadow does what you think too
+
+ellipses overflow
+
+here is a class that does this. It's not just one things like text-overflow
+.overflowing {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+Background, Border, Border-radius, box-shadow, overflow opacity, these are all things I have used in odin projects even up to this point.
+
