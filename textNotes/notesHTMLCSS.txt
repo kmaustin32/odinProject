@@ -190,3 +190,25 @@ Numbers: These shouldn't be in quotes, but they are there.
 
 *** Start on color next time ***
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+First on the list are the color keywords, which I use refrequently. It seems one shouldn't mix and match the way they declare colors in a project. But unless you're only going to use the list of predefined colors, you're kind of going to have to. 
+
+Hex can come with three or six digits and are comprised of digits 0-9 and a-f. When doing the six character layout, there's two digits for each of the rgb channels.
+
+Obviously you can use rgb() or rgba() in ordger to adjust the opacity. Color sections take numbers 0-255, and opacity is 0-1, with zero transparent and one opaque. 
+
+of course there is srgb()
+
+There are various ways to use hue to specify color. 
+
+HWB or hwb()
+  This uses hue, white and black. Hue uses the color wheel and thus takes a number 0-360. The other two are 0-100%. 
+HSL or hsl()
+  This is Hue, Saturation, Brightness.
+  same as above for inputs.
+
+If you want to use an image as a background, you'd use url().
+
+There is also a property for background-position, which lets you move the image in the background of the parent container.
+
+There are functions to use as well, like translate() rotate() scale() and calc()
