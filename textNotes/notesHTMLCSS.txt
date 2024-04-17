@@ -251,3 +251,51 @@ here is a class that does this. It's not just one things like text-overflow
 
 Background, Border, Border-radius, box-shadow, overflow opacity, these are all things I have used in odin projects even up to this point.
 
+=== ADVANCED CSS SELECTORS ===
+
+> child combinator (this one is known)
+  Assume the highest level div has the class main. 
+  main div { style } will style all children divs.
+  main > div will select all children only.
+  main > div > div will select all grandchildren.
+
++ adjacent sibling combinator
+  Assume we have three divs on the same level, div1 div2 and div3.
+  div1 + div will select div2.
+  div1 + div + div will select div3.
+
+~ general sibling combinator
+  Assume the above. 
+  div1 ~ div will select div2 AND div3.
+
+=== PSEUDO SELECTORS ===
+
+This is comprised of pseudo classes and pseudo elements. 
+
+Pseudo classes
+These have been used before. They are a single colon followed with the instruction. 
+:hover :focus :active :link :visited and the like. 
+  These are applied the CSS classes/selectors and change style when active. 
+
+Structural Pseudo Classes
+
+:root 
+  this is kind of like selecting the HTML element. It applies style everywhere. There are a few subtle differences though. 
+
+:first-child and :last-child
+  See names
+
+:empty
+  Selects element that has no children.
+
+:only-child 
+  Selects the element with no siblings.
+
+:nth-child -- this is the best one.
+  :nth-child(3) selects the third child element
+  :nth-child(5n) selects every fifth child element
+  :nth-child(3 + 5n) selects third and every fifth element
+  :nth-child(even) selects even child elements
+
+
+

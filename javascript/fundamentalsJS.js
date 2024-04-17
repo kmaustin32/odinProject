@@ -42,7 +42,7 @@ var triangle = sides == 3 ? true : false;
 console.log(triangle);
 
 const cycle = (str3) => {
-  arr1 = []
+  arr1 = [];
   for (let i=0; i<str3.length; i++) {
     str3[i] == "e" ? arr1.push("EELZ")
     : str3[i] == "a" ? arr1.push("Swolo")
