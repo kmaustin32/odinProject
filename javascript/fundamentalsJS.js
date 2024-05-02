@@ -47,7 +47,7 @@ const cycle = (str3) => {
     str3[i] == "e" ? arr1.push("EELZ")
     : str3[i] == "a" ? arr1.push("Swolo")
     : arr1.push("Frago");
-  }
+  };
   return arr1;
 };
 
