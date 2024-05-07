@@ -337,3 +337,10 @@ You can also use a sort of regular expression here
 
 for example
 img[src$='.jpeg'] will match any image with a source that is jpeg
+
+Do the following exercise until you get it right
+https://flukeout.github.io/
+
+Extremely good. 
+Remember, for many of these selectors like :nth-child, :first-child, :last-child, :not :empty, and the like, you are selecting the type of element itself, NOT the name of the parent element.
+
