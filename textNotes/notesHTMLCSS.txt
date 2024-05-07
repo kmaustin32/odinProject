@@ -299,3 +299,25 @@ Structural Pseudo Classes
 
 
 Pseudo elements
+
+::marker lets you add specific style to list items
+::first-letter and ::first-line let you add specific styles to the first letter and line.
+::selection is for when the user selects the element. 
+
+::before and ::after - this is how to add additional elements on the page without using HTML
+This will put the element before or after the selected class. The following is an example:
+
+<style>
+  .emojify::before {
+    content: '😎 🥸 🤓';
+}
+
+  .emojify::after {
+    content: '🤓 🥸 😎';
+}
+</style>
+
+<body>
+  <div> Let's <span class="emojify">emojify</span>this span!</div>
+</body>
+
