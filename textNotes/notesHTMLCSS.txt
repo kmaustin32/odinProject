@@ -321,3 +321,19 @@ This will put the element before or after the selected class. The following is a
   <div> Let's <span class="emojify">emojify</span>this span!</div>
 </body>
 
+Attribute selectors
+
+We can select anything with a given attribute, such as 
+[src]
+or a selector with an attribute like
+img[src]
+or we can go even further if we want to be specific. 
+img[src="dog.jpeg"]
+
+You can also use a sort of regular expression here
+[attribute^="value"] - ^= Will match strings from the start.
+[attribute$="value"] - $= Will match strings from the end.
+[attribute*="value"] - *= The wildcard selector will match anywhere inside the string.
+
+for example
+img[src$='.jpeg'] will match any image with a source that is jpeg
