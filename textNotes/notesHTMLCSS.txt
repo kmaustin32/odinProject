@@ -357,4 +357,9 @@ position: fixed - this also takes an item out of the normal document flow and fi
 
 position: sticky - this is good for nav too but also item categories that need to stay visible while scrolling. 
 
+Fixed stays in same exact position on the page, whereas absolute will still be attached to the parent element. Note that for absolute to work, the parent needs to be something other than static, like relative.
+  - This seems to be the main use of relative. Rarely do you want to use top, left, etc with a relatively positioned item. 
+
+=== CSS Functions ===
+
 
