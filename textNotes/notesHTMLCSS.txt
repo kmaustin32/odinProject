@@ -344,3 +344,17 @@ https://flukeout.github.io/
 Extremely good. 
 Remember, for many of these selectors like :nth-child, :first-child, :last-child, :not :empty, and the like, you are selecting the type of element itself, NOT the name of the parent element.
 
+=== POSITIONING ===
+
+position: static is the default positioning used.
+
+position: relative is very similar to position static, except you have access to right, top, left, and bottom to move the element relative to its static position. 
+
+position: absolute takes the element entirely out of the normal flow of the document. This is useful if there's a particular part of the screen you want an element to reside on. Something like a modal would use this. It also has access to left, right, top and bottom.
+  - note that this has specific used cases, and flexbox when possible is preferred.
+
+position: fixed - this also takes an item out of the normal document flow and fixes the position relative to the viewport. This is good for navbars. again uses positional attributes. 
+
+position: sticky - this is good for nav too but also item categories that need to stay visible while scrolling. 
+
+
