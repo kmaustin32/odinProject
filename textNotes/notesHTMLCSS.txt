@@ -362,4 +362,39 @@ Fixed stays in same exact position on the page, whereas absolute will still be a
 
 === CSS Functions ===
 
+We've already seen a few of these, like rgb() and background: linear-gradient();
+
+There are four to go into more detail with:
+calc(), min(), max(), clamp();
+
+calc() 
+
+see the following setup:
+
+:root {
+  --header: 3rem;
+  --footer: 40px;
+  --main: calc(100vh - clac(var(--header) + var(--footer)));
+};
+
+Important takeaway is you can mix units this way and nest calc();
+
+min()
+
+This allows you to pick between the smaller of two values, and is really good for responsive web design. 
+
+min(150px, 100%)
+This will select the smaller of 150px or 100% of the parent's width. 
+
+max()
+
+This is just like min, but for picking the largest of the values. This will pick what the smallest possible option is. 
+
+clamp()
+
+This allows us to enter the minimum, ideal, and max size as the three arguments.
+
+h1 {
+  font-size: clamp(320px, 80vw, 60rem);
+}
 
