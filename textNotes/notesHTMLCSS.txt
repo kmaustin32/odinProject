@@ -374,7 +374,7 @@ see the following setup:
 :root {
   --header: 3rem;
   --footer: 40px;
-  --main: calc(100vh - clac(var(--header) + var(--footer)));
+  --main: calc(100vh - calc(var(--header) + var(--footer)));
 };
 
 Important takeaway is you can mix units this way and nest calc();
@@ -398,3 +398,82 @@ h1 {
   font-size: clamp(320px, 80vw, 60rem);
 }
 
+=== CSS Variables ===
+
+You may have noticed in the previous example that the variables began with two dashes. 
+This is how you name variables. All lower case, and any space should be a dashes
+  --my-custom-variable
+
+.error-modal {
+  --error-text-color: red;
+  --modal-background-color: black;
+
+  color: var(--error-text-color);
+  background-color: var(--modal-background-color)
+}
+
+you can nest var() calls to create fallbacks
+
+In the following example, it will first look to --something, then --general-text-color, then finally fall back to green.
+
+.general-text {
+  --general-text-color: orange;
+
+  color: var(--something, var(--general-text-color, green))
+}
+
+Pay attention to scope. In the following example, even though both paragraphs have the variable in their class, since the variable was declared in a parent div of the first, the second will NOT get the style too. 
+
+<div class='cool-div'>
+  <p class='cool-paragraph'>Check out my cool, red background!</p>
+</div>
+
+<p class='boring-paragraph'>I'm not in scope so I'm not cool.</p>
+
+
+.cool-div {
+  --main-bg: red;
+}
+
+.cool-paragraph {
+  background-color: var(--main-bg);
+}
+
+.boring-paragraph {
+  background-color: var(--main-bg);
+}
+
+:root - this is how we declare global variables.
+
+You can actually do this to make dark and light themes.
+
+:root.dark {
+  --text-color: whitesmoke;
+  --general-background: darkgray;
+}
+
+:root.light {
+  --text-color: darkgray;
+  --general-background: whitesmoke;
+}
+
+The JS to do this is as follows:
+
+function setTheme() {
+  //Grab the root element
+  const root = document.documentElement;
+
+  //Check the current root class name, and toggle it
+  const newTheme = root.className === 'dark' ? 'light' : 'dark';
+
+  //set the className property of root to either light or dark
+  root.className = newTheme;
+}
+
+You can also use media queries to set the theme:
+
+@media (prefers-color-theme: dark) {
+  :root {
+    --all-the-things: stuff;
+  }
+}
