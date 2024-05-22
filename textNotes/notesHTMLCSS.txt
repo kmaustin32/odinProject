@@ -477,3 +477,13 @@ You can also use media queries to set the theme:
     --all-the-things: stuff;
   }
 }
+
+=== Browser Compatibility ===
+
+Interesting fact: iOS only allows Safari as a browser. Chrome and Firefox are actually using the web-kit rendering engine rather than the ones they would be using on other platforms. In other words, everything on iOS is a reskinned Safari. 
+
+Check to see which browsers support which technologies when you create applications. 
+
+Netscape started the Mozilla foundation, which is wild. 
+Also, the first browser was made in the context of nuclear engineering? Wow.
+
