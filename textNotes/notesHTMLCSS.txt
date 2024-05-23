@@ -487,3 +487,26 @@ Check to see which browsers support which technologies when you create applicati
 Netscape started the Mozilla foundation, which is wild. 
 Also, the first browser was made in the context of nuclear engineering? Wow.
 
+=== Frameworks and Preprocessors ===
+
+Frameworks are in essence a bunch of predefined classes.
+
+  There are a number of popular frameworks:
+
+  Bootstrap is good for making quick and clean reusable and responsive design. 
+  Tailwind changes how we apply CSS with lots of single line classes.
+
+  Two other ones are -Bulma- and -Foundation- 
+
+Preprocessors are languages that help you write CSS more easily.
+
+Many of the features of these have already been incorporated into vanilla CSS.
+
+Some examples of Preprocessors are SASS, LESS, and Stylus
+SASS used .scss and I have used this before in order to do nesting, but this is now available in vanilla CSS, as are variable declarations. So....
+
+=== FORM BASICS ===
+
+
+
+
