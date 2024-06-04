@@ -525,9 +525,26 @@ there is also an input method with a type attribute. This tells the browser what
 The label is where we add text to tell the user what the input is for.
 The for attribute should match the id of the associated input.
 
+placeholder attribute: This goes on the input itself, and should, ideally, give a hint to how the input should be entered.
+
+name attribute: This is for telling the backend what the data is called.
+If you don't include a name, the input will not be included in submission. 
+Think of it like a variable name. 
+
+For Example, the response object should contain something like the following if you had an input for first_name, last_name, and age:
+
+"form": {
+    "age": "33",
+    "first_name": "John",
+    "last_name": "Doe"
+  }
+
+Everything Together:
 <form action='example.com/path' method='post'>
   <label for='first_name'>First name:</label>
-  <input type='text' id='first_name' />
+  <input type='text' id='first_name' name='first_name' placeholder='Enter name' />
 </form>
 
-*** PICK UP AT PLACEHOLDER ATTRIBUTE TOP ***
+Note: You can use all of these elements and their attributes outside of a form tag if you want to use the data locally. For example, get a name and display it somewhere else on the same page. 
+
+*** TYPE ATTRIBUTES ODIN PROJECT ***
