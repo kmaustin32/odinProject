@@ -547,4 +547,17 @@ Everything Together:
 
 Note: You can use all of these elements and their attributes outside of a form tag if you want to use the data locally. For example, get a name and display it somewhere else on the same page. 
 
-*** TYPE ATTRIBUTES ODIN PROJECT ***
+Additional types of inputs:
+
+email: This will check to make sure you have a properly formatted email.
+password: This masks the characters on screen, usually with an *.
+number: This only accepts numbers as the input.
+date: This provides a calendar to pick dates from.
+
+There's an additional kind of input with its own tag.
+You can determine the initial size with rows and cols.
+
+<textarea rows='20' cols='60'>Some initial content in the box</textarea>
+
+*** SELECTION ELEMENTS ***
+
