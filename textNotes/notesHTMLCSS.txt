@@ -398,7 +398,7 @@ h1 {
   font-size: clamp(320px, 80vw, 60rem);
 }
 
-=== CSS Variables ===
+=== CSS VARIABLES ===
 
 You may have noticed in the previous example that the variables began with two dashes. 
 This is how you name variables. All lower case, and any space should be a dashes
@@ -478,7 +478,7 @@ You can also use media queries to set the theme:
   }
 }
 
-=== Browser Compatibility ===
+=== BROWSER COMPATIBILITY ===
 
 Interesting fact: iOS only allows Safari as a browser. Chrome and Firefox are actually using the web-kit rendering engine rather than the ones they would be using on other platforms. In other words, everything on iOS is a reskinned Safari. 
 
@@ -487,7 +487,7 @@ Check to see which browsers support which technologies when you create applicati
 Netscape started the Mozilla foundation, which is wild. 
 Also, the first browser was made in the context of nuclear engineering? Wow.
 
-=== Frameworks and Preprocessors ===
+=== FRAMEWORKS AND PREPROCESSORS ===
 
 Frameworks are in essence a bunch of predefined classes.
 
@@ -559,5 +559,53 @@ You can determine the initial size with rows and cols.
 
 <textarea rows='20' cols='60'>Some initial content in the box</textarea>
 
-*** SELECTION ELEMENTS ***
+Other Selection Elements
+
+=== SELECTION DROPDOWN ===
+
+This is created with the <select></select> tag and is populated with <option></option>
+
+<select name='dinosaur'>
+  <option value='t-rex'>T-Rex</option>
+  <option value='raptor' selected>Raptor</option>
+  <option value='trike'>Triceratops</option>
+</select>
+
+Note that the value is what is sent to the server. If you leave the value empty, then you end up sending the text. 
+
+You can also add selected to one of the options to make it the default when the browser loads. See above. 
+
+You can also use <optgroup label='thing'></optgroup> to split the options in the list:
+
+<select name='foods'>
+  <optgroup label='Dairy'>
+    <option value='milk'>Milk</option>
+    <option value='cheese'>Cheese</option>
+    <option value='butter'>Butter</option>
+  </optgroup>
+  <optgroup label='Meat'>
+    <option value='hamburger'>Hamburger</option>
+    <option value='chicken'>Chicken</option>
+  </optgroup>
+</select>
+
+=== RADIO BUTTONS ===
+
+This option works well when you have five or fewer choices.
+
+<div>
+  <input type='radio' id='child' name='ticket-type' value='child' />
+  <label for='child'>Child</label>
+</div>
+
+<div>
+  <input type='radio' id='adult' name='ticket-type' value='adult' checked />
+  <label for='adult'>Adult</label>
+</div>
+
+-- The 'name' attiribute is what links together each of the option. In other words, it's like a multiple choice option to be sent to the backend under the prescribed variable name.
+
+checked will start the buttons with one already checked. 
+
+=== CHECKBOXES ===
 
