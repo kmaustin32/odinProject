@@ -603,9 +603,30 @@ This option works well when you have five or fewer choices.
   <label for='adult'>Adult</label>
 </div>
 
--- The 'name' attiribute is what links together each of the option. In other words, it's like a multiple choice option to be sent to the backend under the prescribed variable name.
+-- The 'name' attribute is what links together each of the option. In other words, it's like a multiple choice option to be sent to the backend under the prescribed variable name.
 
 checked will start the buttons with one already checked. 
 
 === CHECKBOXES ===
+
+This option allows multiple selections rather than just the one that we get from radio. 
+
+<div>
+  <input type='checkbox' id='pineapple' name='pizza_topping' value='pineapple' />
+  <label for='pineapple'>Pineapple</label>
+</div>
+
+<div>
+  <input type='checkbox' id='onions' name='pizza_toppings' value='onions' />
+  <label for='onions'>Onions</label>
+</div>
+
+<div>
+  <input type='checkbox' id='peppers' name='pizza_toppings' value='peppers' />
+  <label for='peppers'>Peppers</label>
+</div>
+
+You can also use a single checkbox to true/false questions.
+
+=== BUTTONS ===
 
