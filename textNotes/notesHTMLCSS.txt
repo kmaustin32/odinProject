@@ -630,3 +630,26 @@ You can also use a single checkbox to true/false questions.
 
 === BUTTONS ===
 
+Buttons are an input, but have their own dedicated tag.
+<button>This is the text in the button</button>
+
+the type attribute tells the browser what kind of button it is dealing with.
+
+submit: 
+  this is the default type if you don't add any explicit type. 
+  it will submit the form that it is nested within. 
+  
+  <button type='submit'>Submit</button>
+
+reset:
+  this will reset the entered data in the form.
+
+  <button type='reset'>Reset Form</button>
+
+generic button (button):
+  this is the generic button that is used for all other data. Very common.
+  <button type='button'>Generic Button</button>
+
+Remember, if you have multiple buttons within a form element, you MUST declare type, since the default is submit and it will attempt to send the data to the backend. 
+
+*** Organizing Form Elements TOP ***
