@@ -652,4 +652,27 @@ generic button (button):
 
 Remember, if you have multiple buttons within a form element, you MUST declare type, since the default is submit and it will attempt to send the data to the backend. 
 
-*** Organizing Form Elements TOP ***
+=== FIELDSET ELEMENT ===
+
+<fieldset></fieldset> is a way of orgainizing inputs so the user doesn't get confused or worn out. You'd group similar form elements in these.
+
+Within a fieldset, you can put a <legend></legend> tag. This essentially is a label for the input set.
+
+<fieldset>
+  <legend>What do you want to drink?</legend>
+
+  <div>
+    <input type='radio' id='coffee' name='drink_selection' value='coffee' />
+    <label for='coffee'>coffee</label>
+  </div>
+
+  <div>
+    <input type='radio' id='beer' name='drink_selection' value='beer' />
+    <label for='beer'>beer</label> 
+  </div>
+</fieldset>
+
+=== Challenges with styling forms ===
+
+Default browser settings have a tendency to wreak havoc on inputs and forms. These should be reset in order to have uniformity across browsers.
+
