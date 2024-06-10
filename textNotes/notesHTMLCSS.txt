@@ -716,3 +716,59 @@ a|b — Matches one character that is a or b.
 abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
 
 === VALIDATING FORMS USING JAVASCRIPT ===
+
+The Constraint Validation API 
+
+HTMLButtonElement (represents a <button> element)
+HTMLFieldSetElement (represents a <fieldset> element)
+HTMLInputElement (represents an <input> element)
+HTMLOutputElement (represents an <output> element)
+HTMLSelectElement (represents a <select> element)
+HTMLTextAreaElement (represents a <textarea> element)
+
+The following properties are available to the above elements:
+(Each of these, when true, matches :invalid pseudo-class)
+
+validationMessage - this returns a messages saying why the input was not valid.
+validity - this returns a ValidityState object that describes the validity of the element. The following are common properties:
+
+  patternMismatch - returns true if there's no match based on pattern attribute.
+  tooLong - returns true if greater than maxlength.
+  tooShort - returns true if less than minlength.
+  rangeOverflow - returns true when number greater than defined max
+  rangeUnderflow - returns true when number less than defined min.
+  typeMismatch - returns true when input is wrong type (like for an email input).
+  valueMissing - returns true when a required field is empty.
+
+  valid: Returns true if the element meets all its validation constraints, and is therefore considered to be valid, or false if it fails any constraint. If true, the element matches the :valid CSS pseudo-class; the :invalid CSS pseudo-class otherwise.
+
+willValidate - this returns true if input will be validated on submit.
+
+The following methods are available to the above elements and form element:
+
+  checkValidity() - returns true if all form elements pass, and false otherwise. It also triggers and invalid event on the element. 
+  reportValidity() - this reports invalid fields. this works well with a preventDefault() in an on submit event handler.
+  setCustomValidity(message) - let's you add your own message on validity fail. 
+
+Let's attempt to implement a custom error message.
+Here's the form:
+
+<form>
+  <label for='mail'>Please enter and email address</label>
+  <input type='email' id='mail' name='email_address'>
+  <button type='submit'>submit</button>
+</form>
+
+and to make a custom message:
+
+const email = document.getElementById('mail');
+
+email.addEventListener('input', (e) => {
+  if(email.validity.typeMismatch) {
+    email.setCustomValidity("I am expecting and email address!");
+  } else {
+    email.setCustomValidity("");
+  };
+});
+
+Let's look at a more detailed example.
