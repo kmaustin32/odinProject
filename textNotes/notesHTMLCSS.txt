@@ -676,3 +676,43 @@ Within a fieldset, you can put a <legend></legend> tag. This essentially is a la
 
 Default browser settings have a tendency to wreak havoc on inputs and forms. These should be reset in order to have uniformity across browsers.
 
+=== FORM VALIDATION ===
+
+There are various different kinds of form validation to make sure the right kind of data is making it to the back end. 
+
+Required Validation 
+  Just add the word required to the end of the input tag. 
+  Mark this with an asterisk to indicate it is required. 
+
+Minimum and Maximim length
+  minlength is an attribute as well as maxlength
+  minlength will warn if too short, maxlength will stop adding characters
+
+You can add as many validations as you want, so feel free to combine them. 
+
+Number Range inputs
+  Obviously these only work with number based inputs, like number. 
+  you can set min and max with the similarly named attributes.
+
+Pattern validations
+  This uses regular expressions. Ugh. I remember using these and hate them. 
+  pattern is the attribute where you'd add the regex.
+  It's good practice to add a placeholder with the correct format in these cases.
+
+=== Styling Validations ===
+
+It's probably a good idea to give visual feedback when something is wrong or right.
+
+There are specific pseudo-classes for inputs to help with this, 
+  :valid and :invalid and also :required
+
+Quick regex cheatsheet
+
+a — Matches one character that is a (not b, not aa, and so on).
+abc — Matches a, followed by b, followed by c.
+ab?c — Matches a, optionally followed by a single b, followed by c. (ac or abc)
+ab*c — Matches a, optionally followed by any number of bs, followed by c. (ac, abc, abbbbbc, and so on).
+a|b — Matches one character that is a or b.
+abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
+
+=== VALIDATING FORMS USING JAVASCRIPT ===
