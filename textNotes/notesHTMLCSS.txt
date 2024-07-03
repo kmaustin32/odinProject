@@ -773,7 +773,37 @@ email.addEventListener('input', (e) => {
 
 Let's look at a more detailed example.
 
-// Start Form Style Project 
-Store credential test 3
+=== CSS GRID ===
+Introduction to CSS Grid
 
+Setting up a grid:
 
+Grid uses container elements just like Flexbox does. You'll want to set the parent element's display to grid, or inline-grid.
+
+Much like Flexbox, grid items can also be grid containers themselves. 
+
+In order to make an actual grid, you need the parent container to have the following properties as well:
+
+grid-template-rows
+grid-template-columns
+
+You can also do shorthand, grid-template, which you write rows and colums separated by a /
+
+for example:
+grid-template-rows: 25px 50px 25px;
+grid-template-columns: 30px 30px;
+
+can be written as:
+
+grid-template: 25px 50px 25px  / 30px 30x;
+
+Explicit vs Implicit Grids
+
+If we have more elements than the grid was designed for, it will slot the new element in as if it were meant to be there. 
+
+You can make adjustments for the overflow with
+grid-auto-columns - to set the overflow grid size
+grid-auto-flow - to set column or row for where additional elements go.
+
+the gap property is also really important here. 
+column-gap and row-gap and the shorthand gap that does both. 
