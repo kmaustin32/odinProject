@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template: 250px 250px 250px / 250px 250px 250px;
+  grid-auto-columns: 250px;
+  grid-auto-rows: 250px;
+}
+
+.grid-item {
+  background-color: rgb(178, 209, 237);
+  outline: 3px solid darkcyan;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: slategray;
+  font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: underline;
+}
